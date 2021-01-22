@@ -1,0 +1,33 @@
+{
+  "name": "Devement",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "test:e2e": "wdio wdio.conf.js"
+  },
+  "dependencies": {
+    "@nuxt/content": "^1.11.1",
+    "@nuxtjs/firebase": "^7.3.3",
+    "autoprefixer": "^9.8.6",
+    "core-js": "^3.6.5",
+    "firebase": "^8.2.3",
+    "nuxt": "^2.14.5",
+    "postcss": "^7.0.35",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat@^2.0.2"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^3.0.2",
+    "@tailwindcss/forms": "^0.2.1",
+    "@wdio/cli": "^6.4.7",
+    "@wdio/local-runner": "^6.4.7",
+    "@wdio/mocha-framework": "^6.4.7",
+    "@wdio/spec-reporter": "^6.4.7",
+    "@wdio/sync": "^6.4.7",
+    "eslint-plugin-wdio": "^6.0.12",
+    "webdriverio": "^6.4.7"
+  }
+}

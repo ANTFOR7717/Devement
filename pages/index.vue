@@ -26,7 +26,7 @@ export default {
 <style scoped>
 
 .div-container {
-  @apply relative pt-6 mb-16 pb-16 sm:pb-24;
+  @apply relative pt-6 mb-20 pb-16 sm:pb-24;
 }
 body {
 

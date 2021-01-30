@@ -19,7 +19,6 @@ export default {
         console.log("User logged in.")
         // update data or vuex state
       } else {
-        alert('logged out')
       }
     });
   },

@@ -84,10 +84,6 @@ export default {
       } catch (e) {
         return alert(e)
       }
-      let user = this.$fire.auth.currentUser;
-
-      this.$store.commit('login',true)
-      this.$store.commit('uid', user.uid)
 
 
       await this.$router.push('/dashboard')

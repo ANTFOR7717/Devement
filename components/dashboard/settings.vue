@@ -1,6 +1,6 @@
 <template>
-  <main>
-  <form class="space-y-8 divide-y divide-gray-200 m-7">
+  <main class="xl:ml-8 xl:-mr-8 xl:mt-1.5">
+  <form onsubmit="return false;" class="space-y-8 divide-y divide-gray-200 ml-4 m-4">
     <div class="space-y-8 divide-y divide-gray-200 sm:space-y-5">
       <div>
         <div>
@@ -22,7 +22,7 @@
               <span class="inline-flex items-center px-3 rounded-l-md border border-r-0 border-gray-300 bg-gray-50 text-gray-500 sm:text-sm">
                 github.com/
               </span>
-                <input type="text" name="username" id="username" autocomplete="username" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
+                <input type="text" v-model="settings.github" placeholder="username" name="username" id="username" autocomplete="username" class="flex-1 block w-full focus:ring-indigo-500 focus:border-indigo-500 min-w-0 rounded-none rounded-r-md sm:text-sm border-gray-300">
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@
               About
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <textarea id="about" name="about" rows="3" class="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"></textarea>
+              <textarea id="about" v-model="settings.about" name="about" rows="3" class="max-w-lg shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md"></textarea>
               <p class="mt-2 text-sm text-gray-500">Write a few sentences about your business.</p>
             </div>
           </div>
@@ -71,7 +71,7 @@
               First name
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="first_name" id="first" autocomplete="given-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+              <input type="text" v-model="settings.first" name="first_name" id="first" autocomplete="given-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
 
@@ -80,7 +80,7 @@
               Last name
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="last_name" id="last" autocomplete="family-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+              <input type="text" v-model="settings.last" name="last_name" id="last" autocomplete="family-name" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
 
@@ -89,7 +89,7 @@
               Email address
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input id="email" name="email" type="email" autocomplete="email" class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+              <input id="email" v-model="settings.email" name="email" type="email" autocomplete="email" class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
 
@@ -98,7 +98,7 @@
               Country / Region
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <select id="region" name="country" autocomplete="country" class="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+              <select id="region" v-model="settings.country" name="country" autocomplete="country" class="max-w-lg block focus:ring-indigo-500 focus:border-indigo-500 w-full shadow-sm sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
                 <option>United States</option>
                 <option>Canada</option>
                 <option>Mexico</option>
@@ -111,7 +111,7 @@
               Street address
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="street_address" id="street_address" autocomplete="street-address" class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+              <input type="text" v-model="settings.street" name="street_address" id="street_address" autocomplete="street-address" class="block max-w-lg w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
 
@@ -120,7 +120,7 @@
               City
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="city" id="city" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+              <input type="text" v-model="settings.city" name="city" id="city" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
 
@@ -129,7 +129,7 @@
               State / Province
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="state" id="state" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+              <input type="text" name="state" v-model="settings.state" id="state" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
 
@@ -138,12 +138,12 @@
               ZIP / Postal
             </label>
             <div class="mt-1 sm:mt-0 sm:col-span-2">
-              <input type="text" name="zip" id="zip" autocomplete="postal-code" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
+              <input type="text" name="zip" v-model="settings.zip" id="zip" autocomplete="postal-code" class="max-w-lg block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:max-w-xs sm:text-sm border-gray-300 rounded-md">
             </div>
           </div>
         </div>
       </div>
-
+<!--
       <div class="divide-y divide-gray-200 pt-8 space-y-6 sm:pt-10 sm:space-y-5">
         <div>
           <h3 class="text-lg leading-6 font-medium text-gray-900">
@@ -238,14 +238,15 @@
           </div>
         </div>
       </div>
+-->
     </div>
 
     <div class="pt-5">
       <div class="flex justify-end">
-        <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <button class="invisible bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           Cancel
         </button>
-        <button type="submit" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+        <button @click="submitSettings()" class="ml-3 inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
           Save
         </button>
       </div>
@@ -253,8 +254,8 @@
   </form>
   <div class="space-y-6 sm:px-6 lg:px-0 lg:col-span-9">
     <!-- Plan -->
-    <section class="p-5" aria-labelledby="plan_heading">
-      <form action="#" method="POST">
+    <section class="ml-3.5" aria-labelledby="plan_heading">
+      <form>
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>
@@ -265,19 +266,36 @@
               <legend class="sr-only">
                 Pricing plans
               </legend>
-              <ul class="relative bg-white rounded-md -space-y-px -mx-4">
+              <ul class="relative xl:mx-4.5 bg-white rounded-md -space-y-px">
+                <li :class="pricing.current === 'Guest' ? 'bg-blue-100':'' ">
+                  <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
+                  <div class="relative border rounded-tl-md rounded-tr-md p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
+                    <label class="flex items-center text-sm cursor-pointer">
+                      <input value="Guest" :value="pricing.monthly ? 0:0" name="pricing_plan" v-model="settings.picked" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0">
+                      <span class="ml-3 font-medium text-gray-900">Guest</span>
+                    </label>
+                    <p id="plan-option-pricing-free" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
+                      <!-- On: "text-orange-900", Off: "text-gray-900" -->
+                      <span v-if="pricing.monthly === false" class="">$0 <span class="text-xs font-thin">/ mo</span></span>
+                      <!-- On: "text-orange-700", Off: "text-gray-500" -->
+                      <span v-else>$0 <span class="text-xs font-thin">/ 3mo</span></span>
+                    </p>
+                    <!-- On: "text-orange-700", Off: "text-gray-500" -->
+                    <p id="plan-option-limit-free" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">0 hours per month</p>
+                  </div>
+                </li>
                 <li>
                   <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
                   <div class="relative border rounded-tl-md rounded-tr-md p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                     <label class="flex items-center text-sm cursor-pointer">
-                      <input name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0">
+                      <input :value="pricing.monthly ? 599:1599" name="pricing_plan" v-model="settings.picked" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0">
                       <span class="ml-3 font-medium text-gray-900">Standard</span>
                     </label>
                     <p id="plan-option-pricing-0" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                       <!-- On: "text-orange-900", Off: "text-gray-900" -->
-                      <span class="font-medium">$599 / mo</span>
+                      <span v-if="pricing.monthly === false" class="">$599.00 <span class="text-xs font-thin">/ mo</span></span>
                       <!-- On: "text-orange-700", Off: "text-gray-500" -->
-                      <span>($1599 / 3mo)</span>
+                      <span v-else>$1,599.00 <span class="text-xs font-thin">/ 3mo</span></span>
                     </p>
                     <!-- On: "text-orange-700", Off: "text-gray-500" -->
                     <p id="plan-option-limit-0" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">20 hours per month</p>
@@ -288,14 +306,14 @@
                   <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
                   <div class="relative border-l border-r border-gray-200 p-5 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                     <label class="flex items-center text-sm cursor-pointer">
-                      <input name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-1 plan-option-limit-1">
+                      <input :value="pricing.monthly ? 1299:3499" v-model="settings.picked" name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-1 plan-option-limit-1">
                       <span class="ml-3 font-medium text-gray-900">Business</span>
                     </label>
                     <p id="plan-option-pricing-1" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                       <!-- On: "text-orange-900", Off: "text-gray-900" -->
-                      <span class="font-medium">$1,299 / mo</span>
+                      <span v-if="pricing.monthly === false" class="">$1,299.00 <span class="text-xs font-thin">/ mo</span></span>
                       <!-- On: "text-orange-700", Off: "text-gray-500" -->
-                      <span>($3,499 / 3mo)</span>
+                      <span v-else>$3,499.00 <span class="text-xs font-thin">/ 3mo</span></span>
                     </p>
                     <!-- On: "text-orange-700", Off: "text-gray-500" -->
                     <p id="plan-option-limit-1" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">40 hours per month</p>
@@ -306,14 +324,14 @@
                   <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
                   <div class="relative border border-gray-200 rounded-bl-md rounded-br-md p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                     <label class="flex items-center text-sm cursor-pointer">
-                      <input name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-2 plan-option-limit-2">
+                      <input :value="pricing.monthly ? 2799:7499" v-model="settings.picked" name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-2 plan-option-limit-2">
                       <span class="ml-3 font-medium text-gray-900">Premium</span>
                     </label>
                     <p id="plan-option-pricing-2" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                       <!-- On: "text-orange-900", Off: "text-gray-900" -->
-                      <span class="font-medium">$2,799 / mo</span>
+                      <span v-if="pricing.monthly === false" class="">$2,799.00 <span class="text-xs font-thin">/ mo</span></span>
                       <!-- On: "text-orange-700", Off: "text-gray-500" -->
-                      <span>($7,499 / 3mo)</span>
+                      <span v-else>$7,499.00 <span class="text-xs font-thin">/ 3mo</span></span>
                     </p>
                     <!-- On: "text-orange-700", Off: "text-gray-500" -->
                     <p id="plan-option-limit-2" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">80 hours per month</p>
@@ -324,20 +342,17 @@
 
             <div class="flex items-center">
               <!-- On: "bg-orange-500", Off: "bg-gray-200" -->
-              <button type="button" aria-pressed="true" aria-labelledby="toggleLabel" class="bg-gray-200 relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900 transition-colors ease-in-out duration-200">
-                <span class="sr-only">Use setting</span>
-                <!-- On: "translate-x-5", Off: "translate-x-0" -->
-                <span aria-hidden="true" class="translate-x-0 inline-block h-5 w-5 rounded-full bg-white shadow transform ring-0 transition ease-in-out duration-200"></span>
-              </button>
-              <span id="toggleLabel" class="ml-3">
-                  <span class="text-sm font-medium text-gray-900">Quarterly billing </span>
-                  <span class="text-sm text-gray-500">(Save up to 15%)</span>
-                </span>
+
+              <div class="relative inline-block w-10 mr-2 align-middle select-none transition duration-1000 ease-in">
+                <input v-model="pricing.monthly" type="checkbox" name="toggle" id="toggle" class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 appearance-none cursor-pointer"/>
+                <label for="toggle" class="toggle-label block overflow-hidden h-6 rounded-full bg-gray-300 cursor-pointer"></label>
+              </div>
+              <label for="toggle" class="text-xs text-gray-700">{{ pricing.monthly ? 'Quarterly Billing (Save up to 15%)':'Monthly Billing' }}</label>
             </div>
           </div>
           <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
-            <button type="submit" class="bg-gray-800 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
-              Save
+            <button class="bg-gray-800 border border-transparent rounded-md shadow-sm py-2 px-4 inline-flex justify-center text-sm font-medium text-white hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900">
+              Request Invoice
             </button>
           </div>
         </div>
@@ -375,7 +390,7 @@
                   </tr>
                   </thead>
                   <!--TODO: Create Loop-->
-                  <tbody class="bg-white divide-y divide-gray-200">
+                  <tbody v-if="false" class="bg-white divide-y divide-gray-200">
                   <tr>
                     <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                       1/1/2020
@@ -409,14 +424,88 @@
 export default {
   name: "settings",
 
+  data: () => ({
+    pricing: {
+      monthly: false,
+      current: 'Guest',
+    },
+
+    settings: {
+      github: '',
+      about: '',
+      first: '',
+      last: '',
+      email: '',
+      street: '',
+      country: '',
+      city: '',
+      state: '',
+      zip: '',
+      selected: '',
+      picked: 'Premium',
+    },
+
+  }),
+
   props: {
     imgProfile: {
       String
     }
+  },
+
+  methods: {
+    async submitSettings() {
+      alert('submitting')
+      const messageRef = this.$fire.database.ref('users/'+this.$store.state.user.uid)
+      try {
+        await messageRef.set({
+          project: 0,
+          plan: {
+            guest: true,
+            name: 'Guest'
+          },
+          activity: true,
+          github: {
+            enabled: true,
+            repository: '',
+            name: this.settings.github
+          },
+          settings: {
+            about: this.settings.about,
+            first_name: this.settings.first,
+            last_name: this.settings.last,
+            email_address:this.settings.email,
+            country: this.settings.country,
+            address: this.settings.street,
+            city: this.settings.city,
+            state: this.settings.state,
+            zip: this.settings.zip
+
+          }
+        })
+        alert('submitted')
+      } catch (e) {
+
+
+      }
+
+    }
+
   }
 }
 </script>
 
 <style scoped>
+
+.toggle-checkbox:checked {
+  @apply: right-0 border-green-400;
+  right: 0;
+  border-color: #68D391;
+}
+.toggle-checkbox:checked + .toggle-label {
+  @apply: bg-green-400;
+  background-color: #68D391;
+}
+
 
 </style>

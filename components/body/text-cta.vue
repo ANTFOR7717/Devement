@@ -12,7 +12,10 @@
       </a>
       <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
         <span class="md:block">{{ page.heading }}</span>
+        <vue-typer class="typer text-indigo-400 md:block" :text="['Online Business','Eccomerce Store','Review Website','Mobile Application','Landing Page','Dropshipping Store']" :shuffle='true'></vue-typer>
+        <!--
         <span class="text-indigo-400 md:block">{{ page.extra }}</span>
+        -->
       </h1>
       <p class="mt-3 text-base text-gray-300 sm:mt-5 sm:text-xl lg:text-lg xl:text-xl">
         {{ page.desc }}
@@ -38,9 +41,12 @@
 
 <script>
 
-
+import { VueTyper } from 'vue-typer'
 
 export default {
+  components: {
+    VueTyper
+  },
 
   data() {
    return {
@@ -56,14 +62,15 @@ export default {
     this.page = await this.$content('text-cta').fetch()
 
 
-
-
   }
 
 
 }
 </script>
 
-<style scoped>
+<style lang="scss">
+.vue-typer .custom.char {
+  color: #6466f1;
+}
 
 </style>

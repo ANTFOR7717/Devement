@@ -241,21 +241,16 @@ export default {
         const messageRef = this.$fire.database.ref('users/'+user.uid)
         try {
           await messageRef.set({
-            project: 0,
-            plan: {
-              guest: true,
-              name: 'Guest'
-          },
-            activity: false,
+            active: 0,
+            membership: 'Guest',
+            activity: true,
             github: {
-              enabled: false,
+              enabled: true,
               repository: ''
             }
 
           })
         } catch (e) {
-          alert(e)
-          return
         }
 
     }

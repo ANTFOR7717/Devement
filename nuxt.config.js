@@ -56,6 +56,7 @@ export default {
             persistence: 'local'
     },
           database: true,
+          storage: true,
         }
       }
       ]

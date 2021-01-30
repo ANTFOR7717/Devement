@@ -10,6 +10,7 @@
   <div class="relative min-h-screen flex flex-col">
         <navigation :navbar="changeNav()"
                     :mobile-nav="changeMobileNav()"
+                    v-on:logout="logout()"
                     v-on:fullnav-drop="navState()"
                     v-on:mobilenav="mobileNavState()"
                     :img-profile="this.userImage"
@@ -35,8 +36,6 @@
 
         <projects
           v-show="projects === true && newProject === false"
-          :git-repository="github.name"
-          :git-repository-link="github.link"
         />
 
 
@@ -56,8 +55,9 @@
 
   </div>
 
-
+<!--
     <not-signed-in v-else/>
+-->
   </main>
 </template>
 
@@ -67,10 +67,14 @@ import Settings from "@/components/dashboard/settings";
 export default {
   name: "manage",
 
+  async asyncData(ctx) {
+  },
 
   components: {Settings},
 
   data: () => ({
+
+
     newProject: false,
     userSettings: false,
     projects: true,
@@ -97,6 +101,16 @@ export default {
 
 
   methods: {
+    logout(){
+      this.$fire.auth.signOut().then(() => {
+        alert('signing out')
+        this.$router.push('/')
+      }).catch((error) => {
+       alert('failure')
+      });
+
+    },
+
     swapState() {
       this.userSettings = !this.userSettings
       this.projects = !this.projects
@@ -145,6 +159,7 @@ export default {
         return ''
       }
     },
+
     changeMobileNav() {
       if (this.navigation.mobile === false) {
         return 'hidden'
@@ -159,10 +174,43 @@ export default {
 
     },
 
+    async checkActivity() {
+
+      try {
+
+        let user = 'ANTFOR7717'
+        let repo = 'testAPI'
+        let url = 'https://api.github.com/repos/'+user+'/'+repo+'/commits'
+
+        fetch(url)
+          .then(res => res.json())
+          .then((json) => {
+            let activity = []
+            for (let i = 0; i < json.length; i++) {
+              activity.push(json[i].commit)
+            }
+            return JSON.stringify(activity)
+
+          })
+          .catch(err => { throw err });
+
+        console.log('Yo wtf');
+
+
+
+      } catch (e) {
+        alert(e)
+      }
+
+    }
+
   }
 }
 </script>
 
 <style scoped>
+body {
+  background-color: #f9fafb;
+}
 
 </style>

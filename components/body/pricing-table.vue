@@ -5,21 +5,21 @@
         <div>
           <div class="mb-4 mt-1 grid grid-cols-3 gap-3">
             <div>
-              <button @click="writeToRealtimeDb()" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+              <button @click="standardButton()" :class="button.standard ? 'font-bold bg-indigo-100':''" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-indigo-100">
                 <span class="sr-only">Standard</span>
                 <p>Standard</p>
               </button>
             </div>
 
             <div>
-              <button @click="testFunction()" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+              <button @click="businessButton()" :class="button.business ? 'font-bold bg-indigo-100':''" class="w-full inline-flex justify-center py-2 px-6 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-indigo-100">
                 <span class="sr-only">Business</span>
                 <p>Business</p>
               </button>
             </div>
 
             <div>
-              <button @click="readFromRealtimeDb()" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50">
+              <button @click="premiumButton()" :class="button.premium ? 'font-bold bg-indigo-100':''" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-indigo-100">
                 <span class="sr-only">Premium</span>
                 <p>Premium</p>
               </button>
@@ -31,7 +31,15 @@
 
         <span class="flex flex-col text-center mt-2">
           <span class="pb-1 flex flex-col text-center">
-            <span class="pt-1 text-5xl font-extrabold text-black tracking-tight">$1299
+            <span v-if="button.business === true" class="pt-1 text-5xl font-extrabold text-black tracking-tight">$1299
+                  <span class="text-xl font-medium text-gray-500">
+                        /month
+                      </span></span>
+             <span v-if="button.standard === true" class="pt-1 text-5xl font-extrabold text-black tracking-tight">$599
+                  <span class="text-xl font-medium text-gray-500">
+                        /month
+                      </span></span>
+             <span v-if="button.premium === true" class="pt-1 text-5xl font-extrabold text-black tracking-tight">$2799
                   <span class="text-xl font-medium text-gray-500">
                         /month
                       </span></span>
@@ -41,16 +49,22 @@
 
 
            <div class="mt-2">
-           <span class="mx-3 px-5 py-0.5 text-white text-lg font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
+            <span v-if="button.standard === true" class="mx-3 px-5 py-0.5 text-white text-lg font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
+                    20 Hours
+                  </span>
+             <span v-if="button.business === true" class="mx-3 px-5 py-0.5 text-white text-lg font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
                     40 Hours
+                  </span>
+             <span v-if="button.premium === true" class="mx-3 px-5 py-0.5 text-white text-lg font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
+                    80 Hours
                   </span>
               </div>
               </span>
 
-        <div class="mt-4">
+        <div class="mt-8">
           <div class="space-y-6 content-center mb-2">
             <!--TODO: Programmatic list -->
-          <ul class="flex items-center justify-center">
+          <ul v-for="feature in features.current" class="flex items-center justify-center">
             <li class="inline flex lg:col-span-1">
               <div class="flex-shrink-0">
                 <!-- Heroicon name: check-circle -->
@@ -59,46 +73,7 @@
                 </svg>
               </div>
               <p class="ml-3 text-sm text-gray-700">
-                Entry to annual conference
-              </p>
-            </li>
-          </ul>
-          <ul class="flex items-center justify-center">
-            <li class="inline flex lg:col-span-1">
-                <div class="flex-shrink-0">
-                  <!-- Heroicon name: check-circle -->
-                  <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                  </svg>
-                </div>
-                <p class="ml-3 text-sm text-gray-700">
-                  Entry to annual conference
-                </p>
-              </li>
-          </ul>
-          <ul class="flex items-center justify-center">
-            <li class="inline flex lg:col-span-1">
-              <div class="flex-shrink-0">
-                <!-- Heroicon name: check-circle -->
-                <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <p class="ml-3 text-sm text-gray-700">
-                Entry to annual conference
-              </p>
-            </li>
-          </ul>
-          <ul class="flex items-center justify-center">
-            <li class="inline flex lg:col-span-1">
-              <div class="flex-shrink-0">
-                <!-- Heroicon name: check-circle -->
-                <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                  <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
-                </svg>
-              </div>
-              <p class="ml-3 text-sm text-gray-700">
-                Entry to annual conference
+                {{ feature }}
               </p>
             </li>
           </ul>
@@ -123,45 +98,49 @@
 
 export default {
   name: "pricing-table",
+  data: () => ({
+      button: {
+        standard: false,
+        business: true,
+        premium: false,
+      },
+
+      features: {
+        current: ['Realtime Support 24/7','Unlimited Meeting Scheduling', 'Weekly Detailed Reports', 'Task & Subtask Management'],
+        standard: ['Standard Business Hours Support','4 Scheduled Meetings', 'Bi-Weekly Detailed Reports', 'Task Management'],
+        business: ['Realtime Support 24/7','Unlimited Meeting Scheduling', 'Weekly Detailed Reports', 'Task & Subtask Management'],
+        premium: ['Priority Realtime Support 24/7','Unlimited Anytime Meeting Scheduling', 'Weekly Advanced Detailed Reports', 'Premium Onboarding Efforts']
+}
+    }
+  ),
 
   methods: {
+    standardButton(){
+      this.button.standard = true
+      this.button.business = false
+      this.button.premium = false
 
-
-    async writeToRealtimeDb() {
-      const messageRef = this.$fire.database.ref('users/test')
-      try {
-        await messageRef.set({
-          username: 'ladylike'
-        })
-      } catch (e) {
-        alert(e)
-        return
-      }
-      alert('Success.')
+      this.features.current = this.features.standard
     },
 
-    async readFromRealtimeDb() {
-      const messageRef = this.$fire.database.ref('message')
-      try {
-        const snapshot = await messageRef.once('value')
-        alert(snapshot.val().message)
-      } catch (e) {
-        alert(e)
-      }
+    businessButton(){
+      this.button.standard = false
+      this.button.business = true
+      this.button.premium = false
+
+      this.features.current = this.features.business
     },
 
-    async testFunction() {
-      const messageRef = this.$fire.database.ref('message')
-      try {
-        await messageRef.set({
-          message: 'Nuxt-Fire with Firebase Realtime Database rocks!'
-        })
-      } catch (e) {
-        alert(e)
-        return
-      }
-      alert('Success.')
-    }
+    premiumButton(){
+      this.button.standard = false
+      this.button.business = false
+      this.button.premium = true
+
+      this.features.current = this.features.premium
+    },
+
+
+
 
 
 

@@ -1,5 +1,5 @@
 <template>
-  <form class="space-y-8 divide-y divide-gray-200 m-7">
+  <div class="space-y-8 divide-y divide-gray-200 m-7">
     <div class="space-y-6">
       <div>
         <h1 class="text-lg leading-6 font-medium text-gray-900">
@@ -15,7 +15,7 @@
           Project Name
         </label>
         <div class="mt-1">
-          <input type="text" name="project_name" id="project_name" class="block w-full shadow-sm focus:ring-light-blue-500 focus:border-light-blue-500 sm:text-sm border-gray-300 rounded-md">
+          <input type="text" v-model="projectName" name="project_name" id="project_name" class="block w-full shadow-sm focus:ring-light-blue-500 focus:border-light-blue-500 sm:text-sm border-gray-300 rounded-md">
         </div>
       </div>
 
@@ -24,21 +24,21 @@
           Description
         </label>
         <div class="mt-1">
-          <textarea id="description" name="description" rows="3" class="block w-full shadow-sm focus:ring-light-blue-500 focus:border-light-blue-500 sm:text-sm border-gray-300 rounded-md"></textarea>
+          <textarea id="description" v-model="projectDescription" name="description" rows="3" class="block w-full shadow-sm focus:ring-light-blue-500 focus:border-light-blue-500 sm:text-sm border-gray-300 rounded-md"></textarea>
         </div>
       </div>
 
       <div class="space-y-2">
         <div class="space-y-1">
-          <label for="add_team_members" class="block text-sm font-medium text-gray-700">
+          <label for="business-plan" class="block text-sm font-medium text-gray-700 mb-2">
             Add Business Plan
           </label>
           <div class="flex">
             <div class="flex-grow">
-              <input type="text" name="add_team_members" id="add_team_members" class="block w-full shadow-sm focus:ring-light-blue-500 focus:border-light-blue-500 sm:text-sm border-gray-300 rounded-md" placeholder="Email address" aria-describedby="add_team_members_helper">
+              <input type="file" @change="getFileObject($event)" id="business-plan" class="block w-full shadow-sm focus:ring-light-blue-500 focus:border-light-blue-500 sm:text-sm border-gray-300 rounded-md" aria-describedby="business-plan">
             </div>
             <span class="ml-3">
-              <button type="button" class="bg-white inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500">
+              <button class="invisible bg-white inline-flex items-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500">
                 <!-- Heroicon name: plus -->
                 <svg class="-ml-2 mr-1 h-5 w-5 text-gray-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
                   <path fill-rule="evenodd" d="M10 5a1 1 0 011 1v3h3a1 1 0 110 2h-3v3a1 1 0 11-2 0v-3H6a1 1 0 110-2h3V6a1 1 0 011-1z" clip-rule="evenodd" />
@@ -59,9 +59,9 @@
           <!-- On: "bg-light-blue-50 border-light-blue-200 z-10", Off: "border-gray-200" -->
           <div class="relative border rounded-tl-md rounded-tr-md p-4 flex">
             <div class="flex items-center h-5">
-              <input id="settings-option-0" name="privacy_setting" type="radio" class="h-4 w-4 text-light-blue-600 cursor-pointer focus:ring-light-blue-500 border-gray-300" checked>
+              <input v-model="privacy" value="public" type="radio" class="h-4 w-4 text-light-blue-600 cursor-pointer focus:ring-light-blue-500 border-gray-300">
             </div>
-            <label for="settings-option-0" class="ml-3 flex flex-col cursor-pointer">
+            <label class="ml-3 flex flex-col cursor-pointer">
               <!-- On: "text-light-blue-900", Off: "text-gray-900" -->
               <span class="block text-sm font-medium">
                 Public access
@@ -76,9 +76,9 @@
           <!-- On: "bg-light-blue-50 border-light-blue-200 z-10", Off: "border-gray-200" -->
           <div class="relative border border-gray-200 p-4 flex">
             <div class="flex items-center h-5">
-              <input id="settings-option-1" name="privacy_setting" type="radio" class="h-4 w-4 text-light-blue-600 cursor-pointer focus:ring-light-blue-500 border-gray-300">
+              <input v-model="privacy" value="private" type="radio" class="h-4 w-4 text-light-blue-600 cursor-pointer focus:ring-light-blue-500 border-gray-300">
             </div>
-            <label for="settings-option-1" class="ml-3 flex flex-col cursor-pointer">
+            <label class="ml-3 flex flex-col cursor-pointer">
               <!-- On: "text-light-blue-900", Off: "text-gray-900" -->
               <span class="block text-sm font-medium">
                 Private to Project Members
@@ -95,17 +95,54 @@
 
 
       <div class="flex justify-end">
-        <button type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500">
+        <button @click="newProject()" type="button" class="bg-white py-2 px-4 border border-gray-300 rounded-md shadow-sm text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-light-blue-500">
           Submit Project
         </button>
       </div>
     </div>
-  </form>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "new-project"
+  name: "new-project",
+
+  data: () => ({
+    privacy: '',
+    projectName: '',
+    projectDescription: '',
+    file: null,
+  }),
+
+  methods: {
+
+    async getFileObject(file){
+      this.file = await file
+    },
+
+
+   async newProject() {
+     const projectSubmission = this.$fire.database.ref('users/'+this.$store.state.user.uid+'/project/'+this.projectName)
+     const storageRef = this.$fire.storage.ref().child('users/'+this.$store.state.user.uid+'/project/'+this.projectName)
+     let file = this.file
+      try {
+        await projectSubmission.set({
+          privacy: this.privacy,
+          projectDescription: this.projectDescription,
+          underReview: true,
+        })
+        await storageRef.putString(file)
+
+
+
+        alert('submitted')
+      } catch (e) {
+
+
+      }
+
+    }
+  }
 }
 </script>
 

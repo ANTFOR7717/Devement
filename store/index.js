@@ -2,6 +2,7 @@ export const state = () => ({
   user: {
     uid: null,
     login: false,
+    activity: '',
   }
 
 
@@ -15,6 +16,10 @@ export const getters = {
 
   login(state) {
     return state.user.login
+  },
+
+  activity(state) {
+    return state.user.activity
   }
 
 }
@@ -27,7 +32,12 @@ export const mutations = {
 
   login(state, login) {
     state.user.login = login
+  },
+
+  activity(state, activity) {
+    state.user.activity = activity
   }
+
 
 
 

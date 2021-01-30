@@ -71,6 +71,7 @@ export default {
 <style lang="scss">
 .vue-typer .custom.char {
   color: #6466f1;
+
 }
 
 </style>

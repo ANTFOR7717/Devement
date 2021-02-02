@@ -29,6 +29,8 @@ export default {
   @apply relative pt-6 mb-20 pb-16 sm:pb-24;
 }
 body {
+  overflow: hidden;
+  margin-bottom: -40px;
 
 }
 

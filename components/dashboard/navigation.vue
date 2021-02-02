@@ -19,18 +19,18 @@
               <div class="relative pt-1">
                 <div class="flex mb-2 items-center justify-between">
                   <div>
-      <span class="text-xs font-semibold inline-block mt-2 py-1 px-2 uppercase rounded-full text-green-600 bg-green-200">
-        {{ hoursRemaining }}/{{ hoursAllowed }} Hours Remaining
+      <span class="text-xs font-semibold inline-block mt-2 py-1 px-2 uppercase rounded-full text-gray-100 bg-indigo-500">
+        {{ hours.remaining }}/{{ hours.allowed }} Hours Remaining
       </span>
                   </div>
                   <div class="text-right -mb-2.5">
-      <span class="text-lg font-bold inline-block text-white">
-        Recharge
+      <span class="text-medium inline-block text-white">
+        {{ hours.plan }}
       </span>
                   </div>
                 </div>
                 <div class="overflow-hidden h-2 mb-4 text-xs flex rounded bg-white">
-                  <div :style="'width: 95%'" :class="'bg-green-500'" class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center"></div>
+                  <div :style="'width:' + (this.hours.remaining / this.hours.allowed) * 100 + '%'" :class="(this.hours.remaining / this.hours.allowed) * 100 > 80 ? 'bg-green-500' : (this.hours.remaining / this.hours.allowed) * 100 > 25 ? 'bg-yellow-400' : 'bg-red-500' " class="shadow-none flex flex-col text-center whitespace-nowrap text-white justify-center"></div>
                 </div>
               </div>
             </div>
@@ -45,7 +45,7 @@
 
                 Menu open: "hidden", Menu closed: "block"
               -->
-              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" />
               </svg>
               <!-- Icon when menu is open. -->
@@ -54,7 +54,7 @@
 
                 Menu open: "block", Menu closed: "hidden"
               -->
-              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+              <svg class="hidden h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
@@ -114,13 +114,26 @@
 <script>
 export default {
   name: "navigation",
+  data: () => ({
+    hours: {
+      remaining: 6,
+      allowed: 20,
+      plan: 'Guest'
+    }
+
+  }),
+
+
+
   props: {
     imgProfile: String,
     navbar: String,
     mobileNav: String,
-    hoursRemaining: '',
-    hoursAllowed: '',
   },
+
+  methods: {
+
+  }
 
 }
 </script>

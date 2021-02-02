@@ -32,7 +32,7 @@ export default {
 body {
   overflow: hidden;
   zoom: 100%;
-  margin-bottom: -45px;
+  margin-bottom: -17px;
 
 }
 

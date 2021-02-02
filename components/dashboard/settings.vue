@@ -267,12 +267,13 @@
                 Pricing plans
               </legend>
               <ul class="relative xl:mx-4.5 bg-white rounded-md -space-y-px">
-                <li :class="pricing.current === 'Guest' ? 'bg-blue-100':'' ">
+
+                <li :class="pricing.current === 'Guest' ? 'bg-indigo-500 text-gray-50':'' " class="mb-3">
                   <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
-                  <div class="relative border rounded-tl-md rounded-tr-md p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
+                  <div class="relative border p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                     <label class="flex items-center text-sm cursor-pointer">
-                      <input value="Guest" :value="pricing.monthly ? 0:0" name="pricing_plan" v-model="settings.picked" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0">
-                      <span class="ml-3 font-medium text-gray-900">Guest</span>
+                      <input :value="pricing.monthly ? 0:0" name="pricing_plan" v-model="settings.picked" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0">
+                      <span :class="pricing.current === 'Guest' ? 'text-gray-50':'text-gray-900' " class="ml-3 font-medium">Guest</span>
                     </label>
                     <p id="plan-option-pricing-free" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                       <!-- On: "text-orange-900", Off: "text-gray-900" -->
@@ -284,59 +285,61 @@
                     <p id="plan-option-limit-free" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">0 hours per month</p>
                   </div>
                 </li>
-                <li>
+
+                <li :class="pricing.current === 'Standard' ? 'bg-indigo-500 text-gray-50':'' ">
                   <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
                   <div class="relative border rounded-tl-md rounded-tr-md p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                     <label class="flex items-center text-sm cursor-pointer">
-                      <input :value="pricing.monthly ? 599:1599" name="pricing_plan" v-model="settings.picked" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0">
-                      <span class="ml-3 font-medium text-gray-900">Standard</span>
+                      <input :value="pricing.monthly ? 1599:599" name="pricing_plan" v-model="settings.picked" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-0 plan-option-limit-0">
+                      <span :class="pricing.current === 'Standard' ? 'text-gray-50':'text-gray-900' " class="ml-3 font-medium">Standard</span>
                     </label>
-                    <p id="plan-option-pricing-0" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
+                    <p id="plan-option-pricing-0" :class="pricing.current === 'Standard' ? 'text-gray-50':'text-gray-700'" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                       <!-- On: "text-orange-900", Off: "text-gray-900" -->
                       <span v-if="pricing.monthly === false" class="">$599.00 <span class="text-xs font-thin">/ mo</span></span>
                       <!-- On: "text-orange-700", Off: "text-gray-500" -->
                       <span v-else>$1,599.00 <span class="text-xs font-thin">/ 3mo</span></span>
                     </p>
                     <!-- On: "text-orange-700", Off: "text-gray-500" -->
-                    <p id="plan-option-limit-0" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">20 hours per month</p>
+                    <p :class="pricing.current === 'Standard' ? 'text-gray-50':'text-gray-600'" id="plan-option-limit-0" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 0 md:text-right">20 hours per month</p>
                   </div>
                 </li>
 
-                <li>
+                <li :class="pricing.current === 'Business' ? 'bg-indigo-500 text-gray-50':'' ">
                   <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
                   <div class="relative border-l border-r border-gray-200 p-5 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                     <label class="flex items-center text-sm cursor-pointer">
-                      <input :value="pricing.monthly ? 1299:3499" v-model="settings.picked" name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-1 plan-option-limit-1">
-                      <span class="ml-3 font-medium text-gray-900">Business</span>
+                      <input :value="pricing.monthly ? 3499:1299" v-model="settings.picked" name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-1 plan-option-limit-1">
+                      <span :class="pricing.current === 'Business' ? 'text-gray-50':'text-gray-900' " class="ml-3 font-medium text-gray-900">Business</span>
                     </label>
-                    <p id="plan-option-pricing-1" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
+                    <p id="plan-option-pricing-1" :class="pricing.current === 'Standard' ? 'text-gray-50':'text-gray-700'" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                       <!-- On: "text-orange-900", Off: "text-gray-900" -->
                       <span v-if="pricing.monthly === false" class="">$1,299.00 <span class="text-xs font-thin">/ mo</span></span>
                       <!-- On: "text-orange-700", Off: "text-gray-500" -->
                       <span v-else>$3,499.00 <span class="text-xs font-thin">/ 3mo</span></span>
                     </p>
                     <!-- On: "text-orange-700", Off: "text-gray-500" -->
-                    <p id="plan-option-limit-1" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">40 hours per month</p>
+                    <p id="plan-option-limit-1" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 text-gray-600 md:text-right">40 hours per month</p>
                   </div>
                 </li>
 
-                <li>
+                <li :class="pricing.current === 'Premium' ? 'bg-indigo-500 text-gray-50':'' ">
                   <!-- On: "bg-orange-50 border-orange-200 z-10", Off: "border-gray-200" -->
-                  <div class="relative border border-gray-200 rounded-bl-md rounded-br-md p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
+                  <div class="relative border border-gray-200 rounded-b-md p-4 flex flex-col md:pl-4 md:pr-6 md:grid md:grid-cols-3">
                     <label class="flex items-center text-sm cursor-pointer">
-                      <input :value="pricing.monthly ? 2799:7499" v-model="settings.picked" name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-2 plan-option-limit-2">
-                      <span class="ml-3 font-medium text-gray-900">Premium</span>
+                      <input :value="pricing.monthly ? 7499:2799" v-model="settings.picked" name="pricing_plan" type="radio" class="h-4 w-4 text-orange-500 cursor-pointer focus:ring-gray-900 border-gray-300" aria-describedby="plan-option-pricing-2 plan-option-limit-2">
+                      <span :class="pricing.current === 'Premium' ? 'text-gray-50':'text-gray-900'" class="ml-3 font-medium text-gray-900">Premium</span>
                     </label>
-                    <p id="plan-option-pricing-2" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
+                    <p id="plan-option-pricing-2" :class="pricing.current === 'Standard' ? 'text-gray-50':'text-gray-700'" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-center">
                       <!-- On: "text-orange-900", Off: "text-gray-900" -->
                       <span v-if="pricing.monthly === false" class="">$2,799.00 <span class="text-xs font-thin">/ mo</span></span>
                       <!-- On: "text-orange-700", Off: "text-gray-500" -->
                       <span v-else>$7,499.00 <span class="text-xs font-thin">/ 3mo</span></span>
                     </p>
                     <!-- On: "text-orange-700", Off: "text-gray-500" -->
-                    <p id="plan-option-limit-2" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 md:text-right">80 hours per month</p>
+                    <p id="plan-option-limit-2" class="ml-6 pl-1 text-sm md:ml-0 md:pl-0 text-gray-600 md:text-right">80 hours per month</p>
                   </div>
                 </li>
+
               </ul>
             </fieldset>
 
@@ -442,7 +445,7 @@ export default {
       state: '',
       zip: '',
       selected: '',
-      picked: 'Premium',
+      picked: 0,
     },
 
   }),

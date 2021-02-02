@@ -14,8 +14,7 @@
                     v-on:fullnav-drop="navState()"
                     v-on:mobilenav="mobileNavState()"
                     :img-profile="this.userImage"
-                    :hoursAllowed="'20'"
-                    :hoursRemaining="'19'"
+
 
         />
 

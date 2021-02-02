@@ -1,6 +1,5 @@
 <template>
   <main>
-
   <!-- Background color split screen for large screens -->
     <!-- Navbar -->
     <nav class="flex-shrink-0 bg-indigo-600">
@@ -74,9 +73,8 @@
                     <img class="h-8 w-8 rounded-full" :src="imgProfile" alt="">
                   </button>
                 </div>
-       <!-- Dropdown TODO: implement reactive class-->
                 <div :class="navbar" class="origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5" role="menu" aria-orientation="vertical" aria-labelledby="user-menu">
-                  <a v-on:click="$emit('settings')" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings</a>
+                  <a v-on:click="$emit('settings')" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Settings | Projects</a>
                   <a v-on:click="$emit('logout')" href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100" role="menuitem">Logout</a>
                 </div>
 
@@ -98,7 +96,7 @@
         </div>
         <div class="pt-4 pb-3 border-t border-indigo-800">
           <div class="px-2">
-            <a v-on:click="$emit('settings')" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Settings</a>
+            <a v-on:click="$emit('settings')" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Settings | Projects</a>
             <a v-on:click="$emit('logout')" href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Sign out</a>
           </div>
         </div>
@@ -115,6 +113,7 @@
 export default {
   name: "navigation",
   data: () => ({
+    change: true,
     hours: {
       remaining: 0,
       allowed: 0,

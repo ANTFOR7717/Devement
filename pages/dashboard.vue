@@ -8,18 +8,19 @@
 
     <!-- 3 column wrapper -->
   <div class="relative min-h-screen flex flex-col">
-        <navigation :navbar="changeNav()"
-                    :mobile-nav="changeMobileNav()"
-                    v-on:logout="logout()"
-                    v-on:fullnav-drop="navState()"
-                    v-on:mobilenav="mobileNavState()"
-                    :img-profile="this.userImage"
 
+    <navigation :navbar="changeNav()"
+                :mobile-nav="changeMobileNav()"
+                v-on:logout="logout()"
+                v-on:settings="swapState()"
+                v-on:fullnav-drop="navState()"
+                v-on:mobilenav="mobileNavState()"
+                :img-profile="this.userImage"
+    />
 
-        />
+  <div class="flex-grow w-full max-w-7xl mx-auto xl:px-8 lg:flex">
 
-    <div class="flex-grow w-full max-w-7xl mx-auto xl:px-8 lg:flex">
-      <div class="flex-1 min-w-0 bg-white xl:flex">
+  <div class="flex-1 min-w-0 bg-white xl:flex">
 
 
         <account-profile
@@ -30,26 +31,22 @@
           :github-user="github.user"
           :membership="user.membership"
           v-on:new-project="startProject()"
-          v-on:settings="swapState()"/>
-
-
-        <projects
-          v-show="projects === true && newProject === false"
+          v-on:settings="swapState()"
         />
 
+        <projects v-show="projects === true && newProject === false"/>
 
         <settings v-show="userSettings === true && newProject === false"/>
 
-
-        <new-project
-          v-show="newProject === true"/>
-
-
+        <new-project v-show="newProject === true"/>
 
         <activity-feed v-show="newProject === false"/>
 
     </div>
+
+
   </div>
+
   </div>
 
   </div>
@@ -109,6 +106,8 @@ export default {
       });
 
     },
+
+
 
     swapState() {
       this.userSettings = !this.userSettings

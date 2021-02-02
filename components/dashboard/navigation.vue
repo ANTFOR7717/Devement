@@ -116,8 +116,8 @@ export default {
   name: "navigation",
   data: () => ({
     hours: {
-      remaining: 6,
-      allowed: 20,
+      remaining: 0,
+      allowed: 0,
       plan: 'Guest'
     }
 

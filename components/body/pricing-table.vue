@@ -1,27 +1,27 @@
 <template>
   <div class="pricing-table">
-    <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+    <div class="bg-white border-white border-4 sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
       <div class="px-4 py-4 sm:px-10">
         <div>
           <div class="mb-4 mt-1 grid grid-cols-3 gap-3">
             <div>
               <button @click="standardButton()" :class="button.standard ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Standard</span>
-                <p>Standard</p>
+                <span>Standard</span>
               </button>
             </div>
 
             <div>
               <button @click="businessButton()" :class="button.business ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-6 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Business</span>
-                <p>Business</p>
+                <span>Business</span>
               </button>
             </div>
 
             <div>
               <button @click="premiumButton()" :class="button.premium ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Premium</span>
-                <p>Premium</p>
+                <span>Premium</span>
               </button>
             </div>
           </div>
@@ -48,7 +48,7 @@
           </span>
 
 
-           <div class="mt-2">
+           <span class="mt-2">
             <span v-if="button.standard === true" class="mx-3 px-5 py-0.5 text-white text-lg font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
                     20 Hours
                   </span>
@@ -58,7 +58,7 @@
              <span v-if="button.premium === true" class="mx-3 px-5 py-0.5 text-white text-lg font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">
                     80 Hours
                   </span>
-              </div>
+              </span>
               </span>
 
         <div class="mt-7">
@@ -68,7 +68,7 @@
             <li class="inline flex lg:col-span-1">
               <div class="flex-shrink-0">
                 <!-- Heroicon name: check-circle -->
-                <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                <svg class="h-5 w-5 text-green-400" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor">
                   <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd" />
                 </svg>
               </div>

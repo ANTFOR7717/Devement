@@ -25,12 +25,14 @@ export default {
 
 <style scoped>
 
+
 .div-container {
   @apply relative pt-6 mb-20 pb-16 sm:pb-24;
 }
 body {
   overflow: hidden;
-  margin-bottom: -40px;
+  zoom: 100%;
+  margin-bottom: -45px;
 
 }
 

@@ -242,7 +242,11 @@ export default {
         try {
           await messageRef.set({
             active: 0,
-            membership: 'Guest',
+            hours: {
+              current: 0,
+              remaining: 0,
+            },
+            plan: 'Guest',
             activity: true,
             github: {
               enabled: true,

@@ -120,8 +120,25 @@ export default {
       allowed: 0,
       plan: 'Guest'
     }
-
   }),
+
+  async beforeCreate() {
+    const messageRef = this.$fire.database.ref('users/'+this.$store.state.user.uid)
+    try {
+
+      let snapshot = await messageRef.once('value')
+
+      this.hours.remaining = snapshot.val().hours.remaining
+      this.hours.allowed = snapshot.val().hours.current
+      this.hours.plan = snapshot.val().plan
+
+
+    } catch (e) {
+
+    }
+
+  },
+
 
 
 

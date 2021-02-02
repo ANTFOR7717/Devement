@@ -1,25 +1,25 @@
 <template>
-  <div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6 rounded-3xl">
+  <div class="pricing-table">
     <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
       <div class="px-4 py-4 sm:px-10">
         <div>
           <div class="mb-4 mt-1 grid grid-cols-3 gap-3">
             <div>
-              <button @click="standardButton()" :class="button.standard ? 'font-bold bg-indigo-100':''" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-indigo-100">
+              <button @click="standardButton()" :class="button.standard ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Standard</span>
                 <p>Standard</p>
               </button>
             </div>
 
             <div>
-              <button @click="businessButton()" :class="button.business ? 'font-bold bg-indigo-100':''" class="w-full inline-flex justify-center py-2 px-6 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-indigo-100">
+              <button @click="businessButton()" :class="button.business ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-6 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Business</span>
                 <p>Business</p>
               </button>
             </div>
 
             <div>
-              <button @click="premiumButton()" :class="button.premium ? 'font-bold bg-indigo-100':''" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-indigo-100">
+              <button @click="premiumButton()" :class="button.premium ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Premium</span>
                 <p>Premium</p>
               </button>
@@ -61,7 +61,7 @@
               </div>
               </span>
 
-        <div class="mt-8">
+        <div class="mt-7">
           <div class="space-y-6 content-center mb-2">
             <!--TODO: Programmatic list -->
           <ul v-for="feature in features.current" class="flex items-center justify-center">
@@ -154,5 +154,8 @@ export default {
 </script>
 
 <style scoped>
+.pricing-table {
+  @apply mt-16 sm:mt-24 lg:mt-0 lg:col-span-6 rounded-3xl;
+}
 
 </style>

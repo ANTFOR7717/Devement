@@ -24,15 +24,17 @@ export default {
 </script>
 
 <style scoped>
-
-
 .div-container {
   @apply relative pt-6 mb-20 pb-16 sm:pb-24;
 }
+
+</style>
+
+<style>
+
 body {
   overflow: hidden;
   zoom: 100%;
-  margin-bottom: -17px;
 
 }
 

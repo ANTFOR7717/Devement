@@ -1,14 +1,14 @@
 <template>
 
   <div>
-     <!-- Background SVG -->
+     <!-- Background SVG
     <background-svg/>
-     <!-- Container -->
+     Container -->
     <div class="div-container">
       <!-- Navbar -->
-     <navbar/>
+     <navbar class="mb-10"/>
       <!-- Main Body -->
-      <app-body/>
+      <features/>
 
     </div>
   </div>
@@ -29,12 +29,14 @@ export default {
 .div-container {
   @apply relative pt-6 mb-20 pb-16 sm:pb-24;
 }
+
+
+</style>
+
+<style>
 body {
   overflow: hidden;
   zoom: 100%;
-  margin-bottom: -17px;
 
 }
-
-
 </style>

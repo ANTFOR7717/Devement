@@ -1,17 +1,19 @@
 <template>
-  <div class="py-12 bg-white">
+  <div class="py-12 bg-indigo">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
-        <h2 class="text-base text-indigo-600 font-semibold tracking-wide uppercase">Transactions</h2>
-        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-          A better way to send money
+        <div class="flex pb-5 justify-center">
+        <h2 class="text-base text-sm text-white rounded-3xl bg-indigo-700 w-32 font-semibold tracking-wide uppercase">Features</h2>
+        </div>
+        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
+          A better way to build your website
         </p>
-        <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-          Lorem ipsum dolor sit amet consect adipisicing elit. Possimus magnam voluptatum cupiditate veritatis in accusamus quisquam.
+        <p class="mt-4 max-w-2xl text-xl text-gray-400 lg:mx-auto">
+          Stop paying for features you never use and focus on features that matter.
         </p>
       </div>
 
-      <div class="mt-10">
+      <div class="mt-10 pt-10">
         <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
           <div class="flex">
             <div class="flex-shrink-0">
@@ -23,11 +25,11 @@
               </div>
             </div>
             <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-900">
-                Competitive exchange rates
+              <dt class="text-lg leading-6 font-medium text-gray-200">
+               Agnostic development
               </dt>
-              <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+              <dd class="mt-2 text-base text-gray-400">
+                Have your codebase developed with no opinions allowing integration with any platform whenever and wherever.
               </dd>
             </div>
           </div>
@@ -42,11 +44,11 @@
               </div>
             </div>
             <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-900">
-                No hidden fees
+              <dt class="text-lg leading-6 font-medium text-gray-200">
+                Efficient engineering
               </dt>
-              <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+              <dd class="mt-2 text-base text-gray-400">
+                Projects are developed with a think twice code once approach that allow for effective scaling with less bugs.
               </dd>
             </div>
           </div>
@@ -61,11 +63,11 @@
               </div>
             </div>
             <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-900">
-                Transfers are instant
+              <dt class="text-lg leading-6 font-medium text-gray-200">
+                Prioritized speed
               </dt>
-              <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+              <dd class="mt-2 text-base text-gray-400">
+                Your project will be developed with a speed first approach so you can maintain a high google rank and impress your users.
               </dd>
             </div>
           </div>
@@ -80,16 +82,23 @@
               </div>
             </div>
             <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-900">
-                Mobile notifications
+              <dt class="text-lg leading-6 font-medium text-gray-200">
+                Realtime notifications
               </dt>
-              <dd class="mt-2 text-base text-gray-500">
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maiores impedit perferendis suscipit eaque, iste dolor cupiditate blanditiis ratione.
+              <dd class="mt-2 text-base text-gray-400">
+                Receive realtime notifications as your project is updated and provide realtime feedback.
               </dd>
             </div>
           </div>
         </dl>
       </div>
+
+      <div class="mt-10 pt-14 flex justify-center">
+        <button @click="toCreate()" class="w-5/12 py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+          Create your account
+        </button>
+      </div>
+
     </div>
   </div>
 </template>

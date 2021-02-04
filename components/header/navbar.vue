@@ -3,10 +3,10 @@
   <nav class="nav" aria-label="Global">
     <div class="flex items-center flex-1">
       <div class="flex items-center justify-between w-full md:w-auto z-0">
-        <a href="#">
+        <nuxt-link to="/">
           <span class="sr-only">Devement</span>
           <devement-logo/>
-        </a>
+        </nuxt-link>
         <div class="-mr-2 flex items-center md:hidden">
           <button @click="open()" type="button" class="bg-gray-800 rounded-md p-2 inline-flex items-center justify-center text-gray-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus-ring-inset focus:ring-white" id="main-menu" aria-haspopup="true">
             <a class="sr-only">Open main menu</a>
@@ -20,7 +20,7 @@
       <div class="hidden space-x-10 md:flex md:ml-10">
         <a href="#" class="font-medium text-white hover:text-gray-300">Products</a>
 
-        <a href="#" class="font-medium text-white hover:text-gray-300">Features</a>
+        <nuxt-link class="font-medium text-white hover:text-gray-300" to="/features">Features</nuxt-link>
 
         <a href="#" class="font-medium text-white hover:text-gray-300">Showcase</a>
 

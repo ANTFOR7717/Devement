@@ -3,7 +3,14 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <div class="flex pb-5 justify-center">
-        <h2 class="text-base text-sm text-white rounded-3xl bg-indigo-700 w-32 font-semibold tracking-wide uppercase">Features</h2>
+          <nuxt-link to="/" class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+            <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">Features</span>
+            <span class="ml-4 text-sm">Learn more.</span>
+            <!-- Heroicon name: chevron-right -->
+            <svg class="ml-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </nuxt-link>
         </div>
         <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
           A better way to build your website

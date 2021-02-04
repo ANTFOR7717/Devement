@@ -8,7 +8,20 @@
 
 <script>
 export default {
-name: "dashboard"
+name: "dashboard",
+  created() {
+    this.$fire.auth.onAuthStateChanged((user) => {
+      if (user) {
+        let logged = this.$fire.auth.currentUser;
+
+        this.$store.commit('uid', logged.uid)
+        this.$store.commit('login',true)
+        console.log("User logged in.")
+        // update data or vuex state
+      } else {
+      }
+    });
+  },
 }
 </script>
 

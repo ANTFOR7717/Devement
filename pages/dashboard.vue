@@ -1,5 +1,6 @@
 <template>
   <main>
+
   <div v-if="userLoggedIn()">
     <!-- Background color split screen for large screens -->
   <div class="fixed top-0 left-0 w-1/2 h-full bg-white" aria-hidden="true"></div>
@@ -51,9 +52,8 @@
 
   </div>
 
-<!--
-    <not-signed-in v-else/>
--->
+    <not-signed-in v-else-if="userLoggedIn() === false"/>
+
   </main>
 </template>
 

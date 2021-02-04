@@ -95,6 +95,10 @@ export default {
 
   }),
 
+  head() {
+    return {}
+  },
+
 
   methods: {
     logout(){

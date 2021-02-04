@@ -63,7 +63,7 @@
             <div class="flex items-center justify-end">
               <div class="flex">
                 <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Documentation</a>
-                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Support</a>
+                <a href="https://tawk.to/chat/601988e2a9a34e36b97312f8/1ethrtd63#" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Support</a>
               </div>
               <!-- Profile dropdown -->
               <div class="ml-4 relative flex-shrink-0">
@@ -110,6 +110,7 @@
 </template>
 
 <script>
+
 export default {
   name: "navigation",
   data: () => ({
@@ -148,6 +149,9 @@ export default {
   },
 
   methods: {
+    chatPopUp() {
+      alert('Im clicked')
+    }
 
   }
 

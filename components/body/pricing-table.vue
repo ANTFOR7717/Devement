@@ -5,21 +5,21 @@
         <div>
           <div class="mb-4 mt-1 grid grid-cols-3 gap-3">
             <div>
-              <button @click="standardButton()" :class="button.standard ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
+              <button @click="standardButton()" :class="button.standard ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-400 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Standard</span>
                 <span>Standard</span>
               </button>
             </div>
 
             <div>
-              <button @click="businessButton()" :class="button.business ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-6 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
+              <button @click="businessButton()" :class="button.business ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-6 border border-gray-400 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Business</span>
                 <span>Business</span>
               </button>
             </div>
 
             <div>
-              <button @click="premiumButton()" :class="button.premium ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
+              <button @click="premiumButton()" :class="button.premium ? 'bg-indigo-500 text-gray-50':'text-gray-500'" class="w-full inline-flex justify-center py-2 px-4 border border-gray-400 rounded-md shadow-sm bg-white text-sm font-medium hover:text-gray-100 hover:bg-indigo-600">
                 <span class="sr-only">Premium</span>
                 <span>Premium</span>
               </button>

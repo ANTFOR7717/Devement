@@ -13,7 +13,7 @@
       <h1 class="mt-4 text-4xl tracking-tight font-extrabold text-white sm:mt-5 sm:leading-none lg:mt-6 lg:text-5xl xl:text-6xl">
         <span class="md:block">{{ page.heading }}</span>
         <div class="typer-box">
-        <vue-typer class="typer pr-3 text-indigo-400 md:block" :text="['Online Business','Eccomerce Store','Review Website','Mobile Application','Landing Page','Dropshipping Site']" :shuffle='true'></vue-typer>
+        <vue-typer class="typer pr-3 text-indigo-400 md:block" :text="['Online Business','Eccomerce Store','Review Website','Mobile Application','Landing Page','Dropshipping Site','Consulting Firm']" :shuffle='true'></vue-typer>
         </div>
           <div class="mb-5"></div>
 

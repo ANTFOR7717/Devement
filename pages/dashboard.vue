@@ -61,6 +61,7 @@
 
 import Settings from "@/components/dashboard/settings";
 export default {
+  layout: "dashboard",
   name: "manage",
 
   async asyncData(ctx) {

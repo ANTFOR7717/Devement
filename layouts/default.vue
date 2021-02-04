@@ -26,9 +26,25 @@ export default {
 
 </script>
 
-<style>
+<style scoped>
 .main-container {
   @apply relative bg-gray-800 overflow-hidden;
+}
+
+
+</style>
+
+<style>
+@media screen and (min-width: 1200px) {
+  body {
+    overflow: hidden;
+  }
+}
+
+
+body {
+  zoom: 100%;
+
 }
 
 </style>

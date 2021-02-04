@@ -32,11 +32,5 @@ export default {
 
 <style>
 
-body {
-  overflow: hidden;
-  zoom: 100%;
-
-}
-
 
 </style>

@@ -18,9 +18,9 @@
         </div>
       </div>
       <div class="hidden space-x-10 md:flex md:ml-10">
-        <a href="#" class="font-medium text-white hover:text-gray-300">Products</a>
+        <nuxt-link to="/products" class="font-medium text-white hover:text-gray-300">Products</nuxt-link>
 
-        <nuxt-link class="font-medium text-white hover:text-gray-300" to="/features">Features</nuxt-link>
+        <nuxt-link to="/features" class="font-medium text-white hover:text-gray-300">Features</nuxt-link>
 
         <a href="#" class="font-medium text-white hover:text-gray-300">Showcase</a>
 

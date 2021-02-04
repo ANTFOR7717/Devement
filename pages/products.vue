@@ -25,11 +25,6 @@ export default {
 
 <style scoped>
 
-.body {
-  zoom: 72%
-}
-
-
 .div-container {
   @apply relative pt-6 mb-20 pb-16 sm:pb-24;
 }

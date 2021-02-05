@@ -43,9 +43,20 @@
         </div>
       </div>
 
-      <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl lg:-mt-4 sm:px-6 lg:px-0">
+
+      <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl lg:-mt-16 sm:px-6 lg:px-0">
         <!-- Content area -->
         <div class="pt-12 sm:pt-16 lg:pt-20">
+          <span class="features-button flex pb-5 justify-center">
+          <nuxt-link to="/signup" class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+            <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">Company</span>
+            <span class="ml-4 text-sm">Sign up</span>
+            <!-- Heroicon name: chevron-right -->
+            <svg class="ml-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+            </svg>
+          </nuxt-link>
+        </span>
           <h2 class="text-3xl text-gray-100 font-extrabold tracking-tight sm:text-4xl">
             What makes us different
           </h2>

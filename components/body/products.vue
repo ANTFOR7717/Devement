@@ -27,21 +27,24 @@
       <div class="relative">
         <div class="absolute inset-0 h-3/4 bg-gray-800"></div>
         <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="max-w-md mx-auto space-y-4 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-              <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+
+          <div class="max-w-md mx-auto space-y-4 lg:-mt-5 lg:max-w-5xl lg:grid lg:grid-cols-2 lg:gap-5 lg:space-y-0">
+
+
+            <div class="pricing-chart">
+              <div class="pricing-chart-bg">
                 <div>
-                  <h3 class="text-base inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600" id="tier-standard">
+                  <h3 class="pricing-chart-heading">
                     Hosting
                   </h3>
                 </div>
-                <div class="mt-4 flex items-baseline text-6xl font-extrabold">
+                <div class="pricing-chart-price">
                   $12
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                   /mo
                 </span>
                 </div>
-                <p class="mt-5 text-lg text-gray-500">
+                <p class="mt-5 text-xl text-gray-500">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 </p>
               </div>
@@ -54,7 +57,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Pariatur quod similique
                     </p>
                   </li>
@@ -66,7 +69,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Sapiente libero doloribus modi nostrum
                     </p>
                   </li>
@@ -78,7 +81,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Vel ipsa esse repudiandae excepturi
                     </p>
                   </li>
@@ -90,33 +93,33 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Itaque cupiditate adipisci quibusdam
                     </p>
                   </li>
                 </ul>
                 <div class="rounded-md shadow">
-                  <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900" aria-describedby="tier-standard">
+                  <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-xl font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900" aria-describedby="tier-standard">
                     Get started
                   </a>
                 </div>
               </div>
             </div>
 
-            <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
-              <div class="px-6 py-8 bg-white sm:p-10 sm:pb-6">
+            <div class="pricing-chart">
+              <div class="pricing-chart-bg">
                 <div>
-                  <h3 class="text-base inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600">
+                  <h3 class="pricing-chart-heading">
                     Support
                   </h3>
                 </div>
-                <div class="mt-4 flex items-baseline text-6xl font-extrabold">
+                <div class="pricing-chart-price">
                   $79
                   <span class="ml-1 text-2xl font-medium text-gray-500">
                   /mo
                 </span>
                 </div>
-                <p class="mt-5 text-lg text-gray-500">
+                <p class="mt-5 text-xl text-gray-500">
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit.
                 </p>
               </div>
@@ -129,7 +132,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Pariatur quod similique
                     </p>
                   </li>
@@ -141,7 +144,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Sapiente libero doloribus modi nostrum
                     </p>
                   </li>
@@ -153,7 +156,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Vel ipsa esse repudiandae excepturi
                     </p>
                   </li>
@@ -165,18 +168,20 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                       </svg>
                     </div>
-                    <p class="ml-3 text-base text-gray-700">
+                    <p class="ml-3 text-lg text-gray-700">
                       Itaque cupiditate adipisci quibusdam
                     </p>
                   </li>
                 </ul>
                 <div class="rounded-md shadow">
-                  <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900" aria-describedby="tier-standard">
+                  <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-xl font-medium rounded-md text-white bg-gray-800 hover:bg-gray-900" aria-describedby="tier-standard">
                     Get started
                   </a>
                 </div>
               </div>
             </div>
+
+
           </div>
         </div>
       </div>
@@ -185,15 +190,15 @@
           <div class="rounded-lg bg-gray-100 px-6 py-8 sm:p-10 lg:flex lg:items-center">
             <div class="flex-1">
               <div>
-                <h3 class="inline-flex px-4 text-base py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-yellow-300 text-gray-700">
+                <h3 class="inline-flex px-4 text-lg py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-yellow-300 text-gray-700">
                   Development
                 </h3>
               </div>
-              <div class="mt-4 text-lg text-gray-600">Get full access to all of standard license features for solo projects that make less than $20k gross revenue for <span class="font-semibold text-gray-900">$29</span>.</div>
+              <div class="mt-4 text-xl text-gray-600">Get full access to all of standard license features for solo projects that make less than $20k gross revenue for <span class="font-semibold text-gray-900">$29</span>.</div>
             </div>
             <div class="mt-6 rounded-md shadow lg:mt-0 lg:ml-10 lg:flex-shrink-0">
-              <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-base font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
-                Buy Discounted License
+              <a href="#" class="flex items-center justify-center px-5 py-3 border border-transparent text-xl font-medium rounded-md text-gray-900 bg-white hover:bg-gray-50">
+                Create your account
               </a>
             </div>
           </div>
@@ -212,6 +217,32 @@ export default {
 </script>
 
 <style scoped>
+.pricing-chart {
+  @apply flex flex-col rounded-lg shadow-lg overflow-hidden;
+}
+
+.pricing-chart-bg {
+  @apply px-6 py-8 bg-white sm:p-10 sm:pb-6;
+}
+
+.pricing-chart-heading {
+  @apply text-lg inline-flex px-4 py-1 rounded-full text-sm font-semibold tracking-wide uppercase bg-indigo-100 text-indigo-600;
+}
+
+.pricing-chart-price {
+  @apply mt-4 flex items-baseline text-6xl font-extrabold;
+}
+
+
+
+
+
+
+
+
+
+
+
 
 .features-button {
   zoom: 100%;

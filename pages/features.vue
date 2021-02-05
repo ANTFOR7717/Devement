@@ -8,7 +8,7 @@
       <!-- Navbar -->
      <navbar class="mb-10"/>
       <!-- Main Body -->
-      <features/>
+      <features class="-mb-52"/>
 
     </div>
   </div>

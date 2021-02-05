@@ -1,113 +1,124 @@
 <template>
-  <div class="py-12 bg-indigo -mb-32">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="lg:text-center">
-        <div class="flex pb-5 justify-center lg:-mt-10 lg:mb-9">
-          <nuxt-link to="/company" class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
-            <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">Features</span>
-            <span class="ml-4 text-sm">Learn more.</span>
-            <!-- Heroicon name: chevron-right -->
-            <svg class="ml-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
-            </svg>
-          </nuxt-link>
+  <!-- This example requires Tailwind CSS v2.0+ -->
+  <div class="bg-gray-800 -mt-12">
+
+    <div class="max-w-7xl mx-auto py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
+
+      <div class="flex pb-5 justify-center lg:-mt-10 lg:mb-9">
+        <nuxt-link to="/company" class="inline-flex items-center text-white bg-gray-900 rounded-full p-1 pr-2 sm:text-base lg:text-sm xl:text-base hover:text-gray-200">
+          <span class="px-3 py-0.5 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-indigo-500 rounded-full">Features</span>
+          <span class="ml-4 text-sm">Learn more.</span>
+          <svg class="ml-2 w-5 h-5 text-gray-500" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </nuxt-link>
+      </div>
+
+      <div class="pb-16 xl:flex xl:items-center xl:justify-between">
+        <div>
+
+          <h1 class="text-4xl font-extrabold sm:text-5xl sm:tracking-tight">
+            <span class="text-gray-50">Everything you need for </span>
+            <span class="text-indigo-600">your business</span>
+          </h1>
+          <p class="mt-5 text-xl text-gray-300">Includes every feature we offer plus unlimited projects and unlimited users.</p>
         </div>
-        <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-white sm:text-4xl">
-          A better way to build your website
-        </p>
-        <p class="mt-4 max-w-2xl text-xl text-gray-400 lg:mx-auto">
-          Stop paying for features you never use and focus on features that matter.
-        </p>
+        <a href="#" class="mt-8 w-full bg-indigo-600 border border-transparent px-5 py-3 inline-flex items-center justify-center text-base font-medium rounded-md text-white hover:bg-indigo-700 sm:mt-10 sm:w-auto xl:mt-0">Get started today</a>
       </div>
+      <div class="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">
+        <div>
+          <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">Everything you need</h2>
+          <p class="mt-2 text-3xl font-extrabold text-gray-200">All-in-one platform</p>
+          <p class="mt-4 text-lg text-gray-400">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec. Urna, sed a lectus elementum blandit et.</p>
+        </div>
+        <div class="mt-4 sm:mt-8 md:mt-10 md:grid md:grid-cols-2 md:gap-x-8 xl:mt-0 xl:col-span-2">
+          <ul class="divide-y divide-gray-200">
+            <li class="py-4 flex md:py-0 md:pb-4">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Vitae in pulvinar odio id utobortis in inter.</span>
+            </li>
 
-      <div class="mt-10 pt-10">
-        <dl class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10">
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/globe-alt -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9" />
-                </svg>
-              </div>
-            </div>
-            <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-200">
-               Agnostic development
-              </dt>
-              <dd class="mt-2 text-base text-gray-400">
-                Have your codebase developed with no opinions allowing integration with any platform whenever and wherever.
-              </dd>
-            </div>
-          </div>
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Sed sed id viverra viverra augue eget massa.</span>
+            </li>
 
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/scale -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3" />
-                </svg>
-              </div>
-            </div>
-            <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-200">
-                Efficient engineering
-              </dt>
-              <dd class="mt-2 text-base text-gray-400">
-                Projects are developed with a think twice code once approach that allow for effective scaling with less bugs.
-              </dd>
-            </div>
-          </div>
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Urna, gravida amet, a, integer venenatis.</span>
+            </li>
 
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/lightning-bolt -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              </div>
-            </div>
-            <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-200">
-                Prioritized speed
-              </dt>
-              <dd class="mt-2 text-base text-gray-400">
-                Your project will be developed with a speed first approach so you can maintain a high google rank and impress your users.
-              </dd>
-            </div>
-          </div>
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Lobortis sed pharetra amet vitae eleifend.</span>
+            </li>
 
-          <div class="flex">
-            <div class="flex-shrink-0">
-              <div class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white">
-                <!-- Heroicon name: outline/annotation -->
-                <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 8h10M7 12h4m1 8l-4-4H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-3l-4 4z" />
-                </svg>
-              </div>
-            </div>
-            <div class="ml-4">
-              <dt class="text-lg leading-6 font-medium text-gray-200">
-                Realtime notifications
-              </dt>
-              <dd class="mt-2 text-base text-gray-400">
-                Receive realtime notifications as your project is updated and provide realtime feedback.
-              </dd>
-            </div>
-          </div>
-        </dl>
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Ullamcorper blandit a consequat donec elit aoreet.</span>
+            </li>
+          </ul>
+          <ul class="border-t border-gray-200 divide-y divide-gray-200 md:border-t-0">
+            <li class="py-4 flex md:border-t-0 md:py-0 md:pb-4">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Vitae in pulvinar odio id utobortis in inter.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Sed sed id viverra viverra augue eget massa.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Urna, gravida amet, a, integer venenatis.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Lobortis sed pharetra amet vitae eleifend.</span>
+            </li>
+
+            <li class="py-4 flex">
+              <!-- Heroicon name: outline/check -->
+              <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+              </svg>
+              <span class="ml-3 text-base text-gray-300">Ullamcorper blandit a consequat donec elit aoreet.</span>
+            </li>
+          </ul>
+        </div>
       </div>
-
-      <div class="mt-10 pt-14 flex justify-center">
-        <button @click="toCreate()" class="w-5/12 py-2 px-4 border border-transparent rounded-md shadow-sm text-lg font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
-          Create your account
-        </button>
-      </div>
-
     </div>
   </div>
+
 </template>
 
 <script>

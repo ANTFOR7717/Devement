@@ -19,7 +19,7 @@
 
           <h1 class="text-4xl font-extrabold sm:text-5xl sm:tracking-tight">
             <span class="text-gray-50">Everything you need for </span>
-            <span class="text-indigo-600">your business</span>
+            <span class="text-indigo-500">your business</span>
           </h1>
           <p class="mt-5 text-xl text-gray-300">Includes every feature we offer plus unlimited projects and unlimited users.</p>
         </div>
@@ -27,7 +27,7 @@
       </div>
       <div class="border-t border-gray-200 pt-16 xl:grid xl:grid-cols-3 xl:gap-x-8">
         <div>
-          <h2 class="text-base font-semibold text-indigo-600 tracking-wide uppercase">Everything you need</h2>
+          <h2 class="text-base font-semibold text-indigo-400 tracking-wide uppercase">Everything you need</h2>
           <p class="mt-2 text-3xl font-extrabold text-gray-200">All-in-one platform</p>
           <p class="mt-4 text-lg text-gray-400">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec. Urna, sed a lectus elementum blandit et.</p>
         </div>

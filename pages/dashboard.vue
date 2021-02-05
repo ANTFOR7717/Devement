@@ -12,6 +12,7 @@
 
     <navigation :navbar="changeNav()"
                 :mobile-nav="changeMobileNav()"
+                v-on:schedule="scheduleSwap()"
                 v-on:logout="logout()"
                 v-on:settings="swapState()"
                 v-on:fullnav-drop="navState()"
@@ -42,6 +43,10 @@
         <new-project v-show="newProject === true"/>
 
         <activity-feed v-show="newProject === false"/>
+
+        <schedule :class="schedule ? '':'hidden'"
+                   v-on:cancel="scheduleSwap()"
+                   v-on:submit-request="submitRequest()"/>
 
     </div>
 
@@ -77,6 +82,7 @@ export default {
   components: {Settings},
 
   data: () => ({
+    schedule: false,
     login: false,
 
 
@@ -110,6 +116,10 @@ export default {
 
 
   methods: {
+    scheduleSwap() {
+      this.schedule = !this.schedule
+    },
+
     logout(){
       this.$fire.auth.signOut().then(() => {
         alert('signing out')
@@ -118,6 +128,11 @@ export default {
        alert('failure')
       });
 
+    },
+
+    submitRequest() {
+      //TODO: Write to RTD
+      //TODO: Create Notification
     },
 
 

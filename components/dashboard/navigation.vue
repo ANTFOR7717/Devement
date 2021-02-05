@@ -64,8 +64,8 @@
           <div class="hidden lg:block lg:w-80">
             <div class="flex items-center justify-end">
               <div class="flex">
-                <a href="#" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Documentation</a>
-                <a href="https://tawk.to/chat/601988e2a9a34e36b97312f8/1ethrtd63#" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Support</a>
+                <a v-on:click="$emit('schedule')" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Schedule</a>
+                <a v-on:click="$emit('settings')" href="https://tawk.to/chat/601988e2a9a34e36b97312f8/1ethrtd63#" class="px-3 py-2 rounded-md text-sm font-medium text-indigo-200 hover:text-white">Support</a>
               </div>
               <!-- Profile dropdown -->
               <div class="ml-4 relative flex-shrink-0">
@@ -93,13 +93,13 @@
       -->
       <div :class="mobileNav" class="lg:hidden">
         <div class="px-2 pt-2 pb-3">
-          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-white bg-indigo-800">Dashboard</a>
-          <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Support</a>
+          <a href="#" class="block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:bg-indigo-800">Schedule</a>
+          <a href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-800">Support</a>
         </div>
         <div class="pt-4 pb-3 border-t border-indigo-800">
           <div class="px-2">
-            <a v-on:click="$emit('settings')" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Settings | Projects</a>
-            <a v-on:click="$emit('logout')" href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-600">Sign out</a>
+            <a v-on:click="$emit('settings')" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-800">Settings | Projects</a>
+            <a v-on:click="$emit('logout')" href="#" class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-indigo-200 hover:text-indigo-100 hover:bg-indigo-800">Sign out</a>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 <template>
   <main>
 
-  <div v-if="userLoggedIn()">
+  <div v-if="login">
     <!-- Background color split screen for large screens -->
   <div class="fixed top-0 left-0 w-1/2 h-full bg-white" aria-hidden="true"></div>
   <div class="fixed top-0 right-0 w-1/2 h-full bg-gray-50" aria-hidden="true"></div>
@@ -52,7 +52,8 @@
 
   </div>
 
-    <not-signed-in v-else-if="userLoggedIn() === false"/>
+  <!--TODO: Add Delay -->
+  <not-signed-in v-else-if="!login"/>
 
   </main>
 </template>
@@ -67,9 +68,16 @@ export default {
   async asyncData(ctx) {
   },
 
+  created() {
+    this.$fire.auth.onAuthStateChanged((user) => {
+      this.login = !!user;
+    });
+  },
+
   components: {Settings},
 
   data: () => ({
+    login: false,
 
 
     newProject: false,

@@ -255,7 +255,7 @@
   <div class="space-y-6 sm:px-6 lg:px-0 lg:col-span-9">
     <!-- Plan -->
     <section class="ml-3.5" aria-labelledby="plan_heading">
-      <form>
+      <form onsubmit="return false;">
         <div class="shadow sm:rounded-md sm:overflow-hidden">
           <div class="bg-white py-6 px-4 space-y-6 sm:p-6">
             <div>

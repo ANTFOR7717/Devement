@@ -4,7 +4,7 @@
    Container -->
   <div class="div-container">
     <!-- Navbar -->
-    <navbar class="m-7"/>
+    <navbar class="m-6"/>
     <!-- Main Body -->
     <about/>
 
@@ -18,5 +18,6 @@ export default {
 </script>
 
 <style scoped>
+
 
 </style>

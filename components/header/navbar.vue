@@ -1,6 +1,6 @@
 <template>
   <div>
-  <nav class="nav" aria-label="Global">
+  <nav class="nav z-50" aria-label="Global">
     <div class="flex items-center flex-1">
       <div class="flex items-center justify-between w-full md:w-auto z-0">
         <nuxt-link to="/">
@@ -24,7 +24,7 @@
 
         <a href="#" class="font-medium text-white hover:text-gray-300">Showcase</a>
 
-        <a href="#" class="font-medium text-white hover:text-gray-300">Company</a>
+        <nuxt-link to="/company" class="font-medium text-white hover:text-gray-300">Company</nuxt-link>
       </div>
     </div>
     <div class="hidden md:flex">

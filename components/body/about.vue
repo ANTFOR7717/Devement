@@ -1,14 +1,14 @@
 <template>
   <!-- This example requires Tailwind CSS v2.0+ -->
-  <div class="relative bg-white py-16 sm:py-24">
+  <div class="relative bg-gray-800 py-16 lg:-mt-20 sm:py-24 z-0">
     <div class="lg:mx-auto lg:max-w-7xl lg:px-8 lg:grid lg:grid-cols-2 lg:gap-24 lg:items-start">
       <div class="relative sm:py-16 lg:py-0">
         <div aria-hidden="true" class="hidden sm:block lg:absolute lg:inset-y-0 lg:right-0 lg:w-screen">
-          <div class="absolute inset-y-0 right-1/2 w-full bg-gray-50 rounded-r-3xl lg:right-72"></div>
+          <div class="absolute inset-y-0 right-1/2 w-full bg-gray-700 rounded-r-3xl lg:right-72"></div>
           <svg class="absolute top-8 left-1/2 -ml-3 lg:-right-8 lg:left-auto lg:top-12" width="404" height="392" fill="none" viewBox="0 0 404 392">
             <defs>
               <pattern id="02f20b47-fd69-4224-a62a-4c9de5c763f7" x="0" y="0" width="20" height="20" patternUnits="userSpaceOnUse">
-                <rect x="0" y="0" width="4" height="4" class="text-gray-200" fill="currentColor" />
+                <rect x="0" y="0" width="4" height="4" class="text-gray-700" fill="currentColor" />
               </pattern>
             </defs>
             <rect width="404" height="392" fill="url(#02f20b47-fd69-4224-a62a-4c9de5c763f7)" />
@@ -43,13 +43,13 @@
         </div>
       </div>
 
-      <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl sm:px-6 lg:px-0">
+      <div class="relative mx-auto max-w-md px-4 sm:max-w-3xl lg:-mt-4 sm:px-6 lg:px-0">
         <!-- Content area -->
         <div class="pt-12 sm:pt-16 lg:pt-20">
-          <h2 class="text-3xl text-gray-900 font-extrabold tracking-tight sm:text-4xl">
-            On a mission to empower teams
+          <h2 class="text-3xl text-gray-100 font-extrabold tracking-tight sm:text-4xl">
+            What makes us different
           </h2>
-          <div class="mt-6 text-gray-500 space-y-6">
+          <div class="mt-6 text-gray-200 space-y-6">
             <p class="text-lg">
               Sagittis scelerisque nulla cursus in enim consectetur quam. Dictum urna sed consectetur neque tristique pellentesque. Blandit amet, sed aenean erat arcu morbi. Cursus faucibus nunc nisl netus morbi vel porttitor vitae ut. Amet vitae fames senectus vitae.
             </p>
@@ -65,43 +65,47 @@
         <!-- Stats section -->
         <div class="mt-10">
           <dl class="grid grid-cols-2 gap-x-4 gap-y-8">
-            <div class="border-t-2 border-gray-100 pt-6">
-              <dt class="text-base font-medium text-gray-500">Founded</dt>
-              <dd class="text-3xl font-extrabold tracking-tight text-gray-900">2021</dd>
+            <div class="border-t-2 border-gray-500 pt-6">
+              <dt class="text-base font-medium text-gray-200">Founded</dt>
+              <dd class="text-3xl font-extrabold tracking-tight text-gray-400">2021</dd>
             </div>
 
-            <div class="border-t-2 border-gray-100 pt-6">
-              <dt class="text-base font-medium text-gray-500">Employees</dt>
-              <dd class="text-3xl font-extrabold tracking-tight text-gray-900">5</dd>
+            <div class="border-t-2 border-gray-500 pt-6">
+              <dt class="text-base font-medium text-gray-200">Employees</dt>
+              <dd class="text-3xl font-extrabold tracking-tight text-gray-400">5</dd>
+            </div>
+            <!--
+                       <div class="border-t-2 border-gray-100 pt-6">
+                         <dt class="text-base font-medium text-gray-500">Beta Users</dt>
+                         <dd class="text-3xl font-extrabold tracking-tight text-gray-900">521</dd>
+                       </div>
+
+                       <div class="border-t-2 border-gray-100 pt-6">
+                         <dt class="text-base font-medium text-gray-500">Raised</dt>
+                         <dd class="text-3xl font-extrabold tracking-tight text-gray-900">$25M</dd>
+                       </div>
+            -->
+                     </dl>
+            <!--
+                    <div class="mt-10">
+                      <a href="#" class="text-base font-medium text-indigo-600"> Learn more about how we're changing the world <span aria-hidden="true">&rarr;</span> </a>
+                    </div>
+                    -->
+                  </div>
+                </div>
+              </div>
             </div>
 
-            <div class="border-t-2 border-gray-100 pt-6">
-              <dt class="text-base font-medium text-gray-500">Beta Users</dt>
-              <dd class="text-3xl font-extrabold tracking-tight text-gray-900">521</dd>
-            </div>
 
-            <div class="border-t-2 border-gray-100 pt-6">
-              <dt class="text-base font-medium text-gray-500">Raised</dt>
-              <dd class="text-3xl font-extrabold tracking-tight text-gray-900">$25M</dd>
-            </div>
-          </dl>
-          <div class="mt-10">
-            <a href="#" class="text-base font-medium text-indigo-600"> Learn more about how we're changing the world <span aria-hidden="true">&rarr;</span> </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+          </template>
+
+          <script>
+          export default {
+            name: "about"
+          }
+          </script>
+
+          <style scoped>
 
 
-</template>
-
-<script>
-export default {
-  name: "about"
-}
-</script>
-
-<style scoped>
-
-</style>
+          </style>

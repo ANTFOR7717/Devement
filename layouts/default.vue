@@ -16,7 +16,6 @@ export default {
 
         this.$store.commit('uid', logged.uid)
         this.$store.commit('login',true)
-        console.log("User logged in.")
         // update data or vuex state
       } else {
       }

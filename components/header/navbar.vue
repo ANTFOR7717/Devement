@@ -21,15 +21,15 @@
         <nuxt-link to="/products" class="font-medium text-white hover:text-gray-300">Products</nuxt-link>
 
         <nuxt-link to="/features" class="font-medium text-white hover:text-gray-300">Features</nuxt-link>
-
+        <!--
         <a href="#" class="font-medium text-white hover:text-gray-300">Showcase</a>
-
+        -->
         <nuxt-link to="/company" class="font-medium text-white hover:text-gray-300">Company</nuxt-link>
       </div>
     </div>
     <div class="hidden md:flex">
-      <nuxt-link to="/login" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">
-        Log in
+      <nuxt-link :to="route()" class="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-gray-600 hover:bg-gray-700">
+       {{ login === true ? 'Dashboard':'Log in' }}
       </nuxt-link>
     </div>
   </nav>
@@ -78,11 +78,22 @@
 export default {
   name: "navbar.vue",
 
+  created() {
+    this.$fire.auth.onAuthStateChanged((user) => {
+      this.login = !!user;
+    });
+  },
+
   data: () => ({
-    active: true
+    active: true,
+    login: false,
   }),
 
   methods: {
+    route() {
+      return this.login === true ? '/dashboard':'/login'
+    },
+
     open() {
       this.active = false
     },

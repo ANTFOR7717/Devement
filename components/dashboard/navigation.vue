@@ -8,7 +8,9 @@
           <!-- Logo section -->
           <div class="flex items-center px-2 l:px-0 xl:w-64">
             <div class="flex-shrink-0">
+              <nuxt-link to="/">
                <devement-logo class="h-8 w-1"/>
+              </nuxt-link>
             </div>
           </div>
 

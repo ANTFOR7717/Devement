@@ -28,14 +28,14 @@
       <div class="mt-5 w-full sm:mx-auto sm:max-w-lg lg:ml-0">
         <div class="flex flex-wrap items-start justify-between">
           <div class="flex justify-center px-1">
-            <img class="technologies h-9 sm:h-10" src="https://nuxtjs.org/logos/nuxt.svg" alt="Nuxt">
+            <img class="technologies h-9 sm:h-10" src="/nuxt-logo.svg" alt="Nuxt">
           </div>
           <div class="flex justify-center px-1">
             <img class="technologies h-9 sm:h-10" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="Workcation">
 
           </div>
           <div class="flex justify-center px-1">
-            <img class="technologies h-9 sm:h-10" src="https://static.djangoproject.com/img/logos/django-logo-positive.svg" alt="StaticKit">
+            <img class="technologies h-9 sm:h-10" src="/django-logo.svg" alt="StaticKit">
           </div>
         </div>
       </div>

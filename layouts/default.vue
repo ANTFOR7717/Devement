@@ -34,10 +34,8 @@ export default {
 </style>
 
 <style>
-@media screen and (min-width: 1200px) {
-  body {
-    overflow: hidden;
-  }
+html {
+  @apply bg-gray-800;
 }
 
 

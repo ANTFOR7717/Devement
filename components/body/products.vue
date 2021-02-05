@@ -14,7 +14,7 @@
               </svg>
             </nuxt-link>
           </div>
-          <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-4xl">
+          <p class="text-3xl font-extrabold text-white sm:text-4xl lg:text-5xl">
             The right price for you, whoever you are
           </p>
           <p class="text-lg text-gray-300">
@@ -231,25 +231,6 @@ export default {
 
 .pricing-chart-price {
   @apply mt-4 flex items-baseline text-6xl font-extrabold;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-.features-button {
-  zoom: 100%;
-}
-
-.main-body {
-  zoom: 65%
 }
 
 </style>

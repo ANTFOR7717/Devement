@@ -1,5 +1,5 @@
 <template>
-  <div class="py-12 bg-indigo">
+  <div class="py-12 bg-indigo -mb-32">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="lg:text-center">
         <div class="flex pb-5 justify-center lg:-mt-10 lg:mb-9">
@@ -117,5 +117,6 @@ export default {
 </script>
 
 <style scoped>
+
 
 </style>

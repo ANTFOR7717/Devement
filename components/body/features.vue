@@ -31,14 +31,14 @@
           <p class="mt-2 text-3xl font-extrabold text-gray-200">All-in-one platform</p>
           <p class="mt-4 text-lg text-gray-400">Ac euismod vel sit maecenas id pellentesque eu sed consectetur. Malesuada adipiscing sagittis vel nulla nec. Urna, sed a lectus elementum blandit et.</p>
         </div>
-        <div class="mt-4 sm:mt-8 md:mt-10 md:grid md:grid-cols-2 md:gap-x-8 xl:mt-0 xl:col-span-2">
+        <div class="mt-4 px-7 pt-5 border-8 border-white bg-white rounded-2xl sm:mt-8 md:mt-10 md:grid md:grid-cols-2 md:gap-x-8 xl:mt-0 xl:col-span-2">
           <ul class="divide-y divide-gray-200">
             <li class="py-4 flex md:py-0 md:pb-4">
               <!-- Heroicon name: outline/check -->
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Vitae in pulvinar odio id utobortis in inter.</span>
+              <span class="ml-3 text-base text-gray-800">Vitae in pulvinar odio id utobortis in inter.</span>
             </li>
 
             <li class="py-4 flex">
@@ -46,7 +46,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Sed sed id viverra viverra augue eget massa.</span>
+              <span class="ml-3 text-base text-gray-600">Sed sed id viverra viverra augue eget massa.</span>
             </li>
 
             <li class="py-4 flex">
@@ -54,7 +54,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Urna, gravida amet, a, integer venenatis.</span>
+              <span class="ml-3 text-base text-gray-800">Urna, gravida amet, a, integer venenatis.</span>
             </li>
 
             <li class="py-4 flex">
@@ -62,7 +62,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Lobortis sed pharetra amet vitae eleifend.</span>
+              <span class="ml-3 text-base text-gray-600">Lobortis sed pharetra amet vitae eleifend.</span>
             </li>
 
             <li class="py-4 flex">
@@ -70,7 +70,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Ullamcorper blandit a consequat donec elit aoreet.</span>
+              <span class="ml-3 text-base text-gray-800">Ullamcorper blandit a consequat donec elit aoreet.</span>
             </li>
           </ul>
           <ul class="border-t border-gray-200 divide-y divide-gray-200 md:border-t-0">
@@ -79,7 +79,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Vitae in pulvinar odio id utobortis in inter.</span>
+              <span class="ml-3 text-base text-gray-600">Vitae in pulvinar odio id utobortis in inter.</span>
             </li>
 
             <li class="py-4 flex">
@@ -87,7 +87,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Sed sed id viverra viverra augue eget massa.</span>
+              <span class="ml-3 text-base text-gray-800">Sed sed id viverra viverra augue eget massa.</span>
             </li>
 
             <li class="py-4 flex">
@@ -95,7 +95,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Urna, gravida amet, a, integer venenatis.</span>
+              <span class="ml-3 text-base text-gray-600">Urna, gravida amet, a, integer venenatis.</span>
             </li>
 
             <li class="py-4 flex">
@@ -103,7 +103,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Lobortis sed pharetra amet vitae eleifend.</span>
+              <span class="ml-3 text-base text-gray-800">Lobortis sed pharetra amet vitae eleifend.</span>
             </li>
 
             <li class="py-4 flex">
@@ -111,7 +111,7 @@
               <svg class="flex-shrink-0 h-6 w-6 text-green-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
               </svg>
-              <span class="ml-3 text-base text-gray-300">Ullamcorper blandit a consequat donec elit aoreet.</span>
+              <span class="ml-3 text-base text-gray-600">Ullamcorper blandit a consequat donec elit aoreet.</span>
             </li>
           </ul>
         </div>
